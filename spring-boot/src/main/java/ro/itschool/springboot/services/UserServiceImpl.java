@@ -1,4 +1,3 @@
-
 package ro.itschool.springboot.services;
 
 import lombok.extern.slf4j.Slf4j;
@@ -16,7 +15,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserDTO createUser(UserDTO userDTO) {
-        if (userDTO.getAge() < 18 || userDTO.getAge() > 120) {
+        if(userDTO.getAge() < 18 || userDTO.getAge() > 120) {
             log.error("Invalid age.");
         } else {
             userDTOList.add(userDTO);
